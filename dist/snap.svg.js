@@ -8626,5 +8626,15 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
     };
 });
 
+Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
+    var elproto = Element.prototype;
+    elproto.toFront = function () {
+        this.appendTo(this.paper);
+    };
+    elproto.toBack = function () {
+        this.prependTo(this.paper);
+    };
+});
+
 return Snap;
 }));
