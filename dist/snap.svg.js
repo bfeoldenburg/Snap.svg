@@ -2483,6 +2483,9 @@ Element.prototype.toJSON = function () {
     jsonFiller([this], out);
     return out[0];
 };
+
+eve = window.eve;
+	
 // default
 eve.on("snap.util.getattr", function () {
     var att = eve.nt();
